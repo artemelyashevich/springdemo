@@ -15,20 +15,21 @@ public class AuthController {
 
     private final AuthService authService;
 
-    @GetMapping("/registerUser")
+    @GetMapping("/signUp")
     public String registerUser(Model model) {
         model.addAttribute("user", new User());
         return "register";
     }
 
-    @GetMapping("/loginUser")
-    public String login() {
+    @GetMapping("/signIn")
+    public String login(Model model) {
+        model.addAttribute("user", new User());
         return "login";
     }
 
-    @PostMapping("/registerUser")
+    @PostMapping("/signUp")
     public String registerUser(@ModelAttribute("user") User user) {
         this.authService.register(user);
-        return "redirect:/loginUser";
+        return "redirect:/users";
     }
 }

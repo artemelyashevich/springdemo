@@ -34,7 +34,7 @@
     <div class="registration-container">
         <h2 class="form-title">Create Your Account</h2>
 
-        <form th:action="@{/registerUser}" th:object="${user}" method="post" novalidate>
+        <form th:action="@{/signUp}" th:object="${user}" method="post">
             <div class="mb-3">
                 <label for="username" class="form-label">Username</label>
                 <input type="text" class="form-control" id="username" th:field="*{username}"
@@ -51,10 +51,6 @@
                 <button type="submit" class="btn btn-primary">Register</button>
             </div>
         </form>
-
-        <div class="form-footer">
-            <p>Already have an account? <a th:href="@{/loginUser}">Sign in here</a></p>
-        </div>
     </div>
 </div>
 

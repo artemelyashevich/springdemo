@@ -6,6 +6,9 @@
 </head>
 <body>
 <ul>
+    <form th:action="@{/logout}">
+        <button type="submit">Logout</button>
+    </form>
     <li th:each="user : ${listUsers}" th:text="${user.username}"></li>
 </ul>
 </body>

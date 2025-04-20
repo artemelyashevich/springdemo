@@ -5,7 +5,7 @@ spring:
     database: mysql
     show-sql: true
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
   datasource:
     username: admin
     password: admin
